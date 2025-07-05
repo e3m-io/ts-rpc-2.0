@@ -14,7 +14,7 @@ export function parseRpcMessage(message: unknown): RpcMessage | null {
     message.jsonrpc === "2.0"
   ) {
     if (isRpcRequest(message)) {
-      return new RpcRequest(message.method, message.id, message.params);
+      return new RpcRequest(message.id, message.method, message.params);
     }
     if (isRpcNotification(message)) {
       return new RpcNotification(message.method, message.params);

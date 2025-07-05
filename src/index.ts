@@ -1,3 +1,4 @@
+export * from "./parseRpcMessage.ts";
 export * from "./RpcMessage.ts";
 export * from "./RpcNotification.ts";
 export * from "./RpcRequest.ts";
